@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>site1</title>
+    <style>
+      :root {
+        --pcolor: rgb(8, 239, 8);
+        --scolor: rgb(40, 131, 236);
+      }
+
+      * {
+        padding: 1px;
+        margin: 1px;
+        box-sizing: border-box;
+      }
+
+      html {
+        /* background-color: black; */
+        background: linear-gradient(to right, rgb(71, 70, 70), black);
+        height: 200%;
+      }
+      nav li {
+        list-style: none;
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      /* nav a {
+        height: 40px;
+        padding: 40px;
+        margin: 10px;
+        
+
+      } */
+
+      nav ul {
+        display: flex;
+        border: 2px solid aqua;
+        position: relative;
+        border-radius: 113px;
+        /* padding: 40px; */
+      }
+
+      nav a {
+        color: white;
+        font-size: 22px;
+      }
+      a:hover {
+        color: aqua;
+        font-size: larger;
+      }
+
+      .scard:hover {
+        /* background-color: var(--pcolor); */
+        font-size: 25px;
+        /* color: white; */
+        color: rgb(0, 179, 255);
+        flex-wrap: wrap;
+        border-color: var(--scolor);
+        /* width: 190px; */
+        height: 90px;
+        /* border-style: dashed; */
+        background: -moz-linear-gradient(
+          to left,
+          black,
+          rgba(255, 255, 255, 0.208)
+        );
+        position: relative;
+        animation: animate 2s ease-out infinite alternate-reverse;
+      }
+
+      .intext:hover{
+        color: var(--scolor);
+        font-size: 60px;
+        background: linear-gradient(to right,black,rgba(72, 71, 71, 0.244));
+        position: relative;
+        border: 4px solid aqua;
+        transform: rotatex(36);
+        width: 45vw;
+        animation: animate 2s ease-out infinite alternate-reverse;
+        /* height: 35vw; */
+
+        
+
+      }
+      .intext {
+        color: white;
+        font-size: 55px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        position: relative;
+        display: flex;
+        width: 40vw;
+        height: 30vw;
+        border: 4px solid white;
+        top: 20px;
+        left: 40px;
+        margin: 10px;
+        border-radius: 15%;
+        padding: 30px;
+        box-shadow: 2px 2px 4px rgb(68, 69, 71);
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.244),
+          black
+        );
+      }
+
+      .pic img {
+        /* height: 30vw;
+        width: 30vh; */
+        /* border-radius: 100%; */
+        display: inline-flex;
+        position: absolute;
+        left: 60%;
+        top: 190px;
+        height: 50vh;
+        width: 30vw;
+        box-shadow: 5px 5px 7px var(--scolor);
+      }
+      .pic {
+        height: fit-content;
+        width: max-content;
+        align-self: start;
+      }
+
+      .scard {
+        color: aqua;
+        font-size: 20px;
+        /* background-color: rgba(234, 0, 255, 0.29); */
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 60px;
+        margin: 10px;
+        box-shadow: 2px 2px 1px var(--scolor);
+
+        padding: 5px;
+        /* border: 2px solid white; */
+        border: 2px solid white;
+        border-radius: 25%;
+      }
+      .skills {
+        padding: 5px;
+        margin: 2px;
+      }
+      .intro {
+        margin: 40px;
+        padding: 10px;
+      }
+      .card {
+        /* box-shadow: 2px 2px 4px rgb(68, 69, 71); */
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.244),
+          black
+        );
+        box-shadow: 1px 2px 8px white;
+        width: 204px;
+        height: 294px;
+        margin: 25px;
+        justify-content: center;
+        
+      }
+
+      .cards {
+        display: flex;
+        padding: 20px 50px;
+      }
+      .imgs img {
+        /* padding: 10px; */
+        border-radius: 8px;
+        border: 1px solid white;
+        position: relative;
+        left: 5px;
+      }
+      .ctitle {
+        padding: 3px 14px;
+        margin: 5px;
+        display: inline-block;
+        border-radius: 5px;
+      }
+
+      .ctitle h2 {
+        color: aqua;
+      }
+      .content {
+        margin: 3px;
+        padding: 2px 3px;
+        font-size: 16px;
+      }
+
+      .content p {
+        color: rgb(255, 247, 247);
+      }
+
+      .button button {
+        background-color: rgba(128, 128, 128, 0.377);
+        position: relative;
+        left: 30%;
+        margin: 2px;
+        padding: 1px 10px;
+        color: var(--pcolor);
+        box-shadow: none;
+        border: 0.5px solid white;
+      }
+
+      .button button:hover {
+        padding: 3px 15px;
+        cursor: pointer;
+        left: 25%;
+        color: aqua;
+      }
+      .title h1 {
+        color: var(--pcolor);
+        margin: 3px 5px;
+        justify-self: center;
+        display: block;
+        padding: 10px 640px;
+      }
+
+      @keyframes animate {
+        0%{transform: translateX(0px);}
+        100%{transform: translateX(50px);
+        transform: scale(3);
+        transform: rotateY(30deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">skills</a></li>
+        <li><a href="#">projects</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">about me</a></li>
+      </ul>
+    </nav>
+    <div class="intro">
+      <div class="text intext">
+        hii i am vishal a full stack developer and a video editor
+      </div>
+      <div class="pic">
+        <img
+          src="https://images.unsplash.com/photo-1595675024853-0f3ec9098ac7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="skills">
+      <div class="scard">c</div>
+      <div class="scard">c++</div>
+      <div class="scard">mern</div>
+      <div class="scard">python</div>
+      <div class="scard">video editing</div>
+      <div class="scard">javascript</div>
+      <div class="scard">java</div>
+      <div class="scard">mysql</div>
+      <div class="scard">linux</div>
+      <div class="scard">graphic design</div>
+    </div>
+    <hr style="color: aqua; height: 1px"/>
+
+    <div class="title"><h1>projects</h1></div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="imgs">
+          <img
+            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fHww"
+            alt=""
+            width="184px"
+          />
+        </div>
+        <div class="ctitle"><h2>chatbot</h2></div>
+        <div class="content">
+          <p>made a chatbot using apis...............</p>
+        </div>
+        <div class="button"><button>more info</button></div>
+      </div>
+
+      <div class="card">
+        <div class="imgs">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1681487814165-018814e29155?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFzc3dvcmR8ZW58MHx8MHx8fDA%3D"
+            alt=""
+            width="184px"
+          />
+        </div>
+        <div class="ctitle"><h2>password manager</h2></div>
+        <div class="content">
+          <p>made a chatbot using apis...............</p>
+        </div>
+        <div class="button"><button>more info</button></div>
+      </div>
+      <div class="card">
+        <div class="imgs">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1676618539992-21c7d3b6df0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2VjdXJpdHl8ZW58MHx8MHx8fDA%3D"
+            alt=""
+            width="184px"
+          />
+        </div>
+        <div class="ctitle"><h2>security system</h2></div>
+        <div class="content">
+          <p>made a chatbot using apis...............</p>
+        </div>
+        <div class="button"><button>more info</button></div>
+      </div>
+      <div class="card">
+        <div class="imgs">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1678939631612-0e93ee1909a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdlYXRoZXIlMjBmb3JlY2FzdHxlbnwwfHwwfHx8MA%3D%3D"
+            alt=""
+            width="184px"
+          />
+        </div>
+        <div class="ctitle"><h2>weather system</h2></div>
+        <div class="content">
+          <p>made a chatbot using apis...............</p>
+        </div>
+        <div class="button"><button>more info</button></div>
+      </div>
+      <div class="card">
+        <div class="imgs">
+          <img
+            src="https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGxpYnJhcnklMjBtYW5hZ2VtZW50JTIwc3lzdGVtfGVufDB8fDB8fHww"
+            alt=""
+            width="184px"
+          />
+        </div>
+        <div class="ctitle"><h2>library system</h2></div>
+        <div class="content">
+          <p>made a chatbot using apis...............</p>
+        </div>
+        <div class="button"><button>more info</button></div>
+      </div>
+    </div>
+
+    <footer>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </footer>
+  </body>
+</html>
